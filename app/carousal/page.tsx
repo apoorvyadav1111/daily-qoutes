@@ -3,7 +3,7 @@
 import { Navbar } from "@/components/navbar";
 import { AnimatePresence } from "framer-motion";;
 
-import { Quote } from "./components/qoute";
+import { Quotes } from "./components/qoutes";
 
 export default function Home() {
 
@@ -11,7 +11,7 @@ export default function Home() {
       <div className="flex h-full w-100% items-center justify-center p-6 m-16">
           <Navbar />
         <AnimatePresence mode="wait">
-          <Quote/>
+          <Quotes />
         </AnimatePresence>
       </div>
   );

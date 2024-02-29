@@ -5,6 +5,8 @@ import { Moon, Sun } from "lucide-react"
 import { useTheme } from "next-themes"
 
 import { Button } from "@/components/ui/button"
+import { usePathname } from 'next/navigation'
+
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -12,9 +14,11 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 import { ArrowRightIcon } from "@radix-ui/react-icons"
+import Link from "next/link"
 
 export function ModeToggle() {
   const { setTheme } = useTheme()
+  const pathname = usePathname()
 
   return (
     <DropdownMenu>
@@ -40,9 +44,25 @@ export function ModeToggle() {
             <span className="flex flex-row gap-x-2"> Go to Dev <ArrowRightIcon className="translate-y-[-2] w-4 h-4"/></span>
           </a>
         </DropdownMenuItem>
+        {pathname === "/carousal" && (
+          <DropdownMenuItem>
+            <Link href="/">
+              Single Quote
+            </Link>
+          </DropdownMenuItem>      
+        )}
+        {
+          pathname === "/" && (
+          <DropdownMenuItem>
+            <Link href="/carousal">
+              Slideshow Mode
+            </Link>
+          </DropdownMenuItem>
+          )
+        }
         <DropdownMenuItem onClick={() => setTheme("system")}>
           <a href="https://docs.quotable.io" target="_blank" rel="noreferrer">
-          Thanks to Qoutable API 
+          Thanks to Qoutable API for the quotes
           </a>      
         </DropdownMenuItem>
       </DropdownMenuContent>
