@@ -45,19 +45,22 @@ export function ModeToggle() {
           </a>
         </DropdownMenuItem>
         {pathname === "/carousal" && (
+          <Link href="/">
           <DropdownMenuItem>
-            <Link href="/">
+           
               Single Quote
+          </DropdownMenuItem>    
             </Link>
-          </DropdownMenuItem>      
+          
         )}
         {
           pathname === "/" && (
-          <DropdownMenuItem>
+          
             <Link href="/carousal">
+              <DropdownMenuItem>
               Slideshow Mode
+              </DropdownMenuItem>
             </Link>
-          </DropdownMenuItem>
           )
         }
         <DropdownMenuItem onClick={() => setTheme("system")}>
