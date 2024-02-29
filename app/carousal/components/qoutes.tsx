@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import jsondata from "@/app/data.json";
 
 export const Quotes = () => {
-  const [quote, setQuote] = useState([]);
+  const [quote, setQuote] = useState([] as string[]);
   const [author, setAuthor] = useState(''); 
 
   const fetchQuote = () => {

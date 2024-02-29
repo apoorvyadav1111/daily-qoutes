@@ -5,13 +5,13 @@ import { useEffect, useState } from "react";
 import jsondata from "@/app/data.json";
 
 export const Quote = () => {
-  const [quote, setQuote] = useState([]);
+  const [quote, setQuote] = useState([] as string[]);
   const [author, setAuthor] = useState('');
 
   const fetchQuote = () => {
     const randomIndex = Math.floor(Math.random() * jsondata.length);
     const randomQuote = jsondata[randomIndex];
-    setQuote(randomQuote.content.split(' '));
+    setQuote((randomQuote.content as string).split(' '));
     setAuthor(randomQuote.author);
   }
 
