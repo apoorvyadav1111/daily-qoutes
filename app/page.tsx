@@ -8,7 +8,7 @@ import { Quote } from "./components/qoute";
 export default function Home() {
 
   return (
-      <div className="flex h-full w-100% items-center justify-center p-6 m-16">
+      <div className="flex h-full w-100% items-center justify-center bg-gray-200 dark:bg-[#0f0f0f]">
           <Navbar />
         <AnimatePresence mode="wait">
           <Quote/>

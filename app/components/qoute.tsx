@@ -22,7 +22,7 @@ export const Quote = () => {
   return (
         <motion.div 
           exit={{opacity:0, transition:{duration:0.5}}}
-          className="flex flex-col text-wrap text-start translate-y-[-20%]">
+          className="flex flex-col text-wrap text-start translate-y-[-20%] p-4">
           <div className="text-5xl text-gray-900 dark:text-gray-300">
                 <div
                   className="flex flex-wrap gap-x-1">
