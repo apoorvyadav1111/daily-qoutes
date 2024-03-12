@@ -22,8 +22,8 @@ export const Quote = () => {
   return (
         <motion.div 
           exit={{opacity:0, transition:{duration:0.5}}}
-          className="flex flex-col text-wrap text-start translate-y-[-20%] p-4">
-          <div className="text-5xl text-gray-900 dark:text-gray-300">
+          className="flex flex-col text-wrap text-center md:text-start translate-y-[-20%] p-4">
+          <div className="text-3xl lg:text-5xl text-gray-900 dark:text-gray-300">
                 <div
                   className="flex flex-wrap gap-x-1">
                   {quote.map((token, index) => (
@@ -32,7 +32,7 @@ export const Quote = () => {
                       initial={{opacity:0}}
                       animate={{opacity:1}}
                       transition={{duration:0.5, delay:0.1*index}}
-                      className="text-5xl text-gray-900 dark:text-gray-300">
+                      className="text-3xl lg:text-5xl text-gray-900 dark:text-gray-300">
                       {token}&nbsp;
                     </motion.span>
                   ))}
@@ -43,7 +43,7 @@ export const Quote = () => {
               initial={{opacity:0}}
               animate={{opacity:1}}
               transition={{duration:0.5, delay:0.5*quote.length}}
-              className="pt-2 w-[90%] text-end text-gray-700 dark:text-gray-400 text-3xl"
+              className="pt-2 w-[90%] text-end text-gray-700 dark:text-gray-400 text-2xl lg:text-3xl"
               >
               - {author}
             </motion.div>
